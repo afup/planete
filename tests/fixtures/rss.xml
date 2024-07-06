@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Plan&#xE8;te PHP</title>
+        <description>Agrégateur de flux RSS sur le PHP francophone</description>
+        <link>http://localhost/rss.php</link>
+        <language>fr-fr</language>
+        <generator>AFUP</generator>
+        <managingEditor>planetephpfr@afup.org</managingEditor>
+        <item>
+            <title>Article 1</title>
+            <link>https://example.com/article-1</link>
+            <author>Association AFUP</author>
+            <date>Wed, 15 Jun 2022 02:34:44 +0200</date>
+            <description>Contenu de l'article 1</description>
+        </item>
+        <item>
+            <title>Article 2</title>
+            <link>https://example.com/article-2</link>
+            <author>Acme Corp</author>
+            <date>Mon, 11 Apr 2022 07:33:41 +0200</date>
+            <description>Contenu de l'article 2</description>
+        </item>
+    </channel>
+</rss>

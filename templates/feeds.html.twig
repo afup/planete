@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="pt-0 sm:pt-4 mb-0 sm:mb-6">
+        <table class="w-full text-sm text-left">
+            <tbody>
+            {% for feed in feeds %}
+                <tr class="odd:bg-gray-50 even:bg-white dark:odd:bg-slate-700 dark:even:bg-slate-600">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-gray-300 whitespace-nowrap" data-qa="feed-{{ loop.index }}-name">
+                        {{ feed.name }}
+                        <div class="block sm:hidden">
+                            <a href="{{ feed.url }}" class="text-primary-500 hover:underline text-xs" data-qa="feed-{{ loop.index }}-url-mobile">{{ feed.url }}</a>
+                        </div>
+                    </th>
+                    <td class="px-6 py-4 hidden sm:table-cell">
+                        <a href="{{ feed.url }}" class="text-primary-500 hover:underline" data-qa="feed-{{ loop.index }}-url-desk">{{ feed.url }}</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

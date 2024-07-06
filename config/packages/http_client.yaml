@@ -1,0 +1,8 @@
+# config/packages/framework.yaml
+framework:
+    http_client:
+        scoped_clients:
+            planete.php.client:
+                base_uri: '%afup.planete-php-api.base_uri%'
+                headers:
+                    Accept: 'application/json'

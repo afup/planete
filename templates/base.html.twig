@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title>{% block title %}Planète PHP{% endblock %}</title>
+        <link rel="icon" href="{{ asset('images/veille-logo.svg') }}" sizes="any" type="image/svg+xml">
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ path('rss') }}">
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+        {% endblock %}
+
+        {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body class="dark:bg-slate-800 flex flex-col h-screen justify-between">
+        <div>
+            <div class="hidden sm:block bg-primary-900">
+                <nav class="container mx-auto flex text-white justify-center">
+                    <a href="https://afup.org" class="px-5 py-1 text-sm hover:bg-primary-500">AFUP</a>
+                    <a href="https://event.afup.org" class="px-5 py-1 text-sm hover:bg-primary-500">{{ afup_global_menu_event_label ?? 'Event' }}</a>
+                    <a href="https://barometre.afup.org" class="px-5 py-1 text-sm hover:bg-primary-500">Baromètre</a>
+                    <a href="https://planete-php.fr" class="px-5 py-1 text-sm hover:bg-primary-500 bg-primary-500">Planète PHP</a>
+                    <a href="https://pufa.afup.org" class="px-5 py-1 text-sm hover:bg-primary-500">PUFA</a>
+                </nav>
+            </div>
+
+            <div class="bg-primary-500">
+                <nav class="container mx-auto flex flex-col sm:flex-row text-white px-0 sm:px-64 justify-center">
+                    <div class="flex items-center grow gap-4 p-2 sm:p-0">
+                        <img src="{{ asset('images/afup-icon-inverted.png') }}" class="h-11 my-auto" alt=""/>
+                        <a href="{{ path('index') }}" class="text-2xl font-bold" data-qa="site-name">Planète PHP</a>
+                    </div>
+                    <div class="flex justify-between">
+                        <a href="{{ path('articles_list') }}" class="px-6 py-4 hover:bg-primary-300{% if app.request.get('_route') == 'articles_list' %} bg-primary-300 sm:bg-transparent sm:border-b-4 border-white{% endif %}">Articles</a>
+                        <a href="{{ path('feeds_list') }}" class="px-6 py-4 hover:bg-primary-300{% if app.request.get('_route') == 'feeds_list' %} bg-primary-300 sm:bg-transparent sm:border-b-4 border-white{% endif %}">Sources</a>
+                        <a href="{{ url('rss') }}" class="px-6 py-4 hover:bg-primary-300">Flux RSS</a>
+                    </div>
+                </nav>
+            </div>
+
+            <main class="container mx-auto px-0 sm:px-64 mt-0 sm:mt-4">
+                {% block body %}{% endblock %}
+            </main>
+        </div>
+
+        <footer class="py-5 bg-slate-50 dark:bg-slate-700 dark:text-white text-center">
+            Un site <a href="https://afup.org" class="text-primary-500 hover:underline">AFUP</a><br />
+            Hébergé sur <a href="https://www.clever-cloud.com" class="text-primary-500 hover:underline">Clever Cloud</a><br/>
+            Code Source sur <a href="https://github.com/afup/planete" class="text-primary-500 hover:underline">GitHub</a>
+        </footer>
+    </body>
+</html>

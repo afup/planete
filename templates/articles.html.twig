@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="flex flex-col gap-4 mt-4 sm:mt-0">
+        {% for article in articles %}
+            <twig:Article title="{{ article.title }}"
+                          url="{{ article.url }}"
+                          date="{{ article.date }}"
+                          content="{{ article.content }}"
+                          feed="{{ article.feed.name }}"
+                          index="{{ loop.index }}"
+            />
+        {% endfor %}
+    </div>
+
+    <nav class="sm:my-12 flex justify-between dark:text-gray-300">
+        <div class="flex-grow">
+            {% if page > 1 %}
+                <a href="{{ path('articles_list', {page: page - 1}) }}" class="block sm:inline p-6 sm:p-0 hover:underline" data-qa="page-prev">Page précédente</a>
+            {% endif %}
+        </div>
+
+        {% if hasNextPage %}
+            <a href="{{ path('articles_list', {page: page + 1}) }}" class="block p-6 sm:p-0 hover:underline" data-qa="page-next">Page suivante</a>
+        {% endif %}
+    </nav>
+
+{% endblock %}

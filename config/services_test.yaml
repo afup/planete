@@ -1,0 +1,5 @@
+services:
+    App\Tests\MockClientCallback:
+        public: true
+        arguments:
+            $paramPlanetePhpApiPrefix: '%afup.planete-php-api.base_uri%'

@@ -1,0 +1,21 @@
+<div class="px-4 sm:px-0 sm:pt-4 border-b border-gray-200 dark:border-gray-600" data-qa="article">
+    <div class="flex flex-row gap-5">
+        <div class="text-gray-400 font-light pt-1 hidden sm:block" data-qa="article-{{ index }}-date">{{ date | date('d/m/Y') }}</div>
+        <article class="pb-4 sm:pb-8">
+            <a href="{{ url }}" data-qa="article-url">
+                <h2 class="font-bold text-lg sm:text-xl dark:text-gray-300" data-qa="article-{{ index }}-title">{{ title }}</h2>
+            </a>
+            <p class="py-2 font-light dark:text-gray-400" data-qa="article-{{ index }}-content">
+                {{ content | striptags | u.truncate(200, '...', false) | raw }}
+            </p>
+            <div class="flex items-center">
+                <a href="{{ url }}" class="hover:underline text-primary-900 dark:text-primary-500 grow">
+                    Lire sur <span class="font-semibold" data-qa="article-{{ index }}-feed">{{ feed }}</span>
+                </a>
+                <span class="sm:hidden text-xs text-gray-400">
+                    {{ date | date('d/m/Y') }}
+                </span>
+            </div>
+        </article>
+    </div>
+</div>

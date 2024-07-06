@@ -1,0 +1,8 @@
+twig:
+    file_name_pattern: '*.twig'
+    globals:
+        afup_global_menu_event_label: '%afup.global.menu.event.label%'
+
+when@test:
+    twig:
+        strict_variables: true
