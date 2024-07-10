@@ -3,3 +3,5 @@ services:
         public: true
         arguments:
             $paramPlanetePhpApiPrefix: '%afup.planete-php-api.base_uri%'
+
+    App\Service\PlaneteService: '@App\Service\ApiPlaneteService'
