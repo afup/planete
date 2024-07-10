@@ -51,7 +51,7 @@ final readonly class MockClientCallback
                     'response_headers' => [
                         'X-Pagination-Total' => 3,
                         'X-Pagination-Per-Page' => 20,
-                        'X-Pagination-Has-Next-Page' => true,
+                        'X-Pagination-Has-Next-Page' => 'true',
                     ],
                 ],
             );
@@ -76,7 +76,7 @@ final readonly class MockClientCallback
                     'response_headers' => [
                         'X-Pagination-Total' => 3,
                         'X-Pagination-Per-Page' => 2,
-                        'X-Pagination-Has-Next-Page' => false,
+                        'X-Pagination-Has-Next-Page' => 'false',
                     ],
                 ],
             );
@@ -89,7 +89,7 @@ final readonly class MockClientCallback
                     'response_headers' => [
                         'X-Pagination-Total' => 3,
                         'X-Pagination-Per-Page' => 2,
-                        'X-Pagination-Has-Next-Page' => false,
+                        'X-Pagination-Has-Next-Page' => 'false',
                     ],
                 ],
             );
