@@ -1,4 +1,7 @@
 {
+    "cuyz/valinor-bundle": {
+        "version": "0.3.0"
+    },
     "friendsofphp/php-cs-fixer": {
         "version": "3.59",
         "recipe": {

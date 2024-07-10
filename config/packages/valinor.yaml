@@ -1,0 +1,4 @@
+valinor:
+    mapper:
+        date_formats_supported:
+            - 'D, d M Y H:i:s O'
