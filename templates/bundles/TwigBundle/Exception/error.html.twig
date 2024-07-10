@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1 class="text-8xl font-bold text-primary-500 mt-10">Oups !</h1>
+
+    <div class="flex flex-col gap-5 mt-10">
+        <p class="text-xl">
+            Un souci est survenu en essayant de charger la liste des articles.
+        </p>
+
+        <p class="text-xl">
+            Si le problème persiste, vous pouvez nous le signaler sur le Slack des membres.<br/>
+        </p>
+
+        <p class="text-xl">
+            Si vous rencontrez un bug sur le site, n'hésitez pas à venir contribuer sur <a href="https://github.com/afup/planete" class="text-primary-500 hover:underline">GitHub</a>.
+        </p>
+    </div>
+
+{% endblock %}
