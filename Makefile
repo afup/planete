@@ -83,6 +83,7 @@ qa-phpstan:
 qa-cs:
 	$(PHP) vendor/bin/php-cs-fixer fix --dry-run --diff
 
+### Run PHP-CS-Fixer (fix)
 qa-cs-fix:
 	$(PHP) vendor/bin/php-cs-fixer fix
 
