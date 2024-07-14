@@ -17,7 +17,7 @@ final readonly class CachedPlaneteService implements PlaneteService
 
     public function getArticles(?int $page = null): ArticlePage
     {
-        return $this->cache->get('planete_articles', function (ItemInterface $item) use ($page): ArticlePage {
+        return $this->cache->get('planete_articles_' . ($page ?? '1'), function (ItemInterface $item) use ($page): ArticlePage {
             $item->expiresAfter(3600);
 
             return $this->inner->getArticles($page);
