@@ -26,7 +26,7 @@ final readonly class CachedPlaneteService implements PlaneteService
 
     public function getFeeds(): array
     {
-        return $this->cache->get('planete_articles', function (ItemInterface $item): array {
+        return $this->cache->get('planete_feeds', function (ItemInterface $item): array {
             $item->expiresAfter(3600);
 
             return $this->inner->getFeeds();
