@@ -19,6 +19,10 @@ final class ArticlesAction extends AbstractController
     #[Route(path: '/articles', name: 'articles_list', methods: 'GET')]
     public function __invoke(Request $request): Response
     {
+        // Redirection de /articles?page=1 vers /articles
+        if ($request->query->has('page') && $request->query->getInt('page') === 1) {
+            return $this->redirectToRoute('articles_list', status: Response::HTTP_MOVED_PERMANENTLY);
+        }
         $page = $request->query->getInt('page', 1);
 
         $articlesPage = $this->planeteApi->getArticles($page);

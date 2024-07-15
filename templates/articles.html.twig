@@ -1,5 +1,26 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Planète PHP{% if page > 1 %} - page {{ page }}{% endif %}{% endblock %}
+
+{% block head %}
+
+    {% if page == 2 %}
+        <link rel="prev" href="{{ path('articles_list') }}" />
+    {% elseif page > 1 %}
+        <link rel="prev" href="{{ path('articles_list', {page: page - 1}) }}" />
+    {% endif %}
+
+    {% if page == 1 %}
+        <link rel="canonical" href="{{ path('articles_list') }}" />
+    {% else %}
+        <link rel="canonical" href="{{ path('articles_list', {page: page}) }}" />
+    {% endif %}
+
+    {% if hasNextPage %}
+        <link rel="next" href="{{ path('articles_list', {page: page + 1}) }}" />
+    {% endif %}
+{% endblock %}
+
 {% block body %}
 
     <div class="flex flex-col gap-4 mt-4 sm:mt-0">
