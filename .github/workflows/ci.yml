@@ -1,7 +1,7 @@
 name: Coding Standards & Static Analysis
 
-on: [push, pull_request]
-  
+on: [pull_request]
+
 env:
   php-version: '8.3'
 
