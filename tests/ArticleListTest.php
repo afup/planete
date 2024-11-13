@@ -40,11 +40,13 @@ class ArticleListTest extends WebTestCase
         self::assertSelectorTextContains('[data-qa="article-1-date"]', '15/06/2022');
         self::assertSelectorTextContains('[data-qa="article-1-feed"]', 'AFUP');
         self::assertSelectorTextContains('[data-qa="article-1-content"]', "Contenu de l'article 1");
+        self::assertSelectorExists('a[href="https://example.com/article-1"]');
 
         self::assertSelectorTextContains('[data-qa="article-2-title"]', 'Article 2');
         self::assertSelectorTextContains('[data-qa="article-2-date"]', '11/04/2022');
         self::assertSelectorTextContains('[data-qa="article-2-feed"]', 'Acme');
         self::assertSelectorTextContains('[data-qa="article-2-content"]', "Contenu de l'article 2");
+        self::assertSelectorExists('a[href="https://example.com/article-2"]');
 
         self::assertSelectorExists('[data-qa="page-next"]');
         self::assertSelectorNotExists('[data-qa="page-prev"]');
