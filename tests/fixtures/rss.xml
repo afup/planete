@@ -17,7 +17,7 @@
         <item>
             <title>Article 2</title>
             <link>https://example.com/article-2</link>
-            <author>Acme Corp</author>
+            <author/>
             <date>Mon, 11 Apr 2022 07:33:41 +0200</date>
             <description>Contenu de l'article 2</description>
         </item>

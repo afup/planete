@@ -10,7 +10,7 @@ final readonly class Article
         public string $title,
         public string $url,
         public \DateTimeImmutable $date,
-        public string $author,
+        public ?string $author,
         public string $content,
         public Feed $feed,
     ) {}

@@ -39,7 +39,7 @@ final readonly class MockClientCallback
                         'title' => 'Article 2',
                         'url' => 'https://example.com/article-2',
                         'date' => 'Mon, 11 Apr 2022 07:33:41 +0200',
-                        'author' => 'Acme Corp',
+                        'author' => null,
                         'content' => "Contenu de l'article 2",
                         'feed' => [
                             'name' => 'Acme',
