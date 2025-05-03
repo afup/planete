@@ -26,7 +26,7 @@
         "symfony/runtime": "^7.2.3",
         "symfony/serializer": "^7.2.6",
         "symfony/twig-bundle": "^7.2.0",
-        "symfony/ux-twig-component": "^2.23.0",
+        "symfony/ux-twig-component": "^2.24.0",
         "symfony/yaml": "^7.2.6",
         "symfonycasts/tailwind-bundle": "^0.7.1",
         "twig/extra-bundle": "^3.21.0",
