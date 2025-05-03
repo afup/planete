@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa43c092b76ed254410bec15c0a674d1",
+    "content-hash": "d4dfada5edd89603fde8c03fa39c9e46",
     "packages": [
         {
             "name": "composer/semver",
@@ -4077,16 +4077,16 @@
         },
         {
             "name": "symfonycasts/tailwind-bundle",
-            "version": "v0.7.1",
+            "version": "v0.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SymfonyCasts/tailwind-bundle.git",
-                "reference": "81c9e6ff2bb1a95e67fc6af04ca87fccdcf55aa4"
+                "reference": "380502c39bf403f772d050ff9904932040de8cf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SymfonyCasts/tailwind-bundle/zipball/81c9e6ff2bb1a95e67fc6af04ca87fccdcf55aa4",
-                "reference": "81c9e6ff2bb1a95e67fc6af04ca87fccdcf55aa4",
+                "url": "https://api.github.com/repos/SymfonyCasts/tailwind-bundle/zipball/380502c39bf403f772d050ff9904932040de8cf1",
+                "reference": "380502c39bf403f772d050ff9904932040de8cf1",
                 "shasum": ""
             },
             "require": {
@@ -4094,6 +4094,7 @@
                 "symfony/asset-mapper": "^6.3|^7.0",
                 "symfony/cache": "^6.3|^7.0",
                 "symfony/console": "^5.4|^6.3|^7.0",
+                "symfony/deprecation-contracts": "^2.2|^3.0",
                 "symfony/http-client": "^5.4|^6.3|^7.0",
                 "symfony/process": "^5.4|^6.3|^7.0"
             },
@@ -4126,9 +4127,9 @@
             ],
             "support": {
                 "issues": "https://github.com/SymfonyCasts/tailwind-bundle/issues",
-                "source": "https://github.com/SymfonyCasts/tailwind-bundle/tree/v0.7.1"
+                "source": "https://github.com/SymfonyCasts/tailwind-bundle/tree/v0.10.0"
             },
-            "time": "2025-01-23T14:54:07+00:00"
+            "time": "2025-04-09T15:18:46+00:00"
         },
         {
             "name": "twig/extra-bundle",
