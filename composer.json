@@ -29,9 +29,9 @@
         "symfony/ux-twig-component": "^2.24.0",
         "symfony/yaml": "^7.2.6",
         "symfonycasts/tailwind-bundle": "^0.10.0",
-        "twig/extra-bundle": "^3.21.0",
-        "twig/string-extra": "^3.21.0",
-        "twig/twig": "^3.21.1"
+        "twig/extra-bundle": "^3.22.0",
+        "twig/string-extra": "^3.22.0",
+        "twig/twig": "^3.22.0"
     },
     "config": {
         "allow-plugins": {
