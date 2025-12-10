@@ -90,7 +90,7 @@
         "phpstan/extension-installer": "^1.4.3",
         "phpstan/phpstan": "^2.1.31",
         "phpstan/phpstan-symfony": "^2.0.8",
-        "phpunit/phpunit": "^11.5.43",
+        "phpunit/phpunit": "^11.5.46",
         "symfony/browser-kit": "^7.3.6",
         "symfony/css-selector": "^7.3.6",
         "symfony/maker-bundle": "^1.64.0",
