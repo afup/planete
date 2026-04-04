@@ -40,8 +40,8 @@
                         <a href="{{ path('index') }}" class="text-2xl font-bold" data-qa="site-name">Planète PHP</a>
                     </div>
                     <div class="flex justify-between">
-                        <a href="{{ path('articles_list') }}" class="px-6 py-4 hover:bg-primary-300{% if app.request.get('_route') == 'articles_list' %} bg-primary-300 sm:bg-transparent sm:border-b-4 border-white{% endif %}">Articles</a>
-                        <a href="{{ path('feeds_list') }}" class="px-6 py-4 hover:bg-primary-300{% if app.request.get('_route') == 'feeds_list' %} bg-primary-300 sm:bg-transparent sm:border-b-4 border-white{% endif %}">Sources</a>
+                        <a href="{{ path('articles_list') }}" class="px-6 py-4 hover:bg-primary-300{% if app.request.attributes.get('_route') == 'articles_list' %} bg-primary-300 sm:bg-transparent sm:border-b-4 border-white{% endif %}">Articles</a>
+                        <a href="{{ path('feeds_list') }}" class="px-6 py-4 hover:bg-primary-300{% if app.request.attributes.get('_route') == 'feeds_list' %} bg-primary-300 sm:bg-transparent sm:border-b-4 border-white{% endif %}">Sources</a>
                         <a href="{{ url('rss') }}" class="px-6 py-4 hover:bg-primary-300">Flux RSS</a>
                     </div>
                 </nav>
