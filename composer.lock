@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5844d3c11bce83f1b0cfb137be20e4c3",
+    "content-hash": "04e634219fa3940da882d192b6a9e2a7",
     "packages": [
         {
             "name": "composer/semver",
@@ -89,34 +89,38 @@
         },
         {
             "name": "cuyz/valinor",
-            "version": "1.14.1",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CuyZ/Valinor.git",
-                "reference": "12033fccdcc6afa7e73b3e234e4d6656530f2bcb"
+                "reference": "3b0afa3a287ed7f3a69aab223726cf1139454c34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CuyZ/Valinor/zipball/12033fccdcc6afa7e73b3e234e4d6656530f2bcb",
-                "reference": "12033fccdcc6afa7e73b3e234e4d6656530f2bcb",
+                "url": "https://api.github.com/repos/CuyZ/Valinor/zipball/3b0afa3a287ed7f3a69aab223726cf1139454c34",
+                "reference": "3b0afa3a287ed7f3a69aab223726cf1139454c34",
                 "shasum": ""
             },
             "require": {
-                "composer-runtime-api": "^2.0",
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
-                "psr/simple-cache": "^1.0 || ^2.0 || ^3.0"
+                "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
+            },
+            "conflict": {
+                "phpstan/phpstan": "<1.0 || >= 3.0",
+                "vimeo/psalm": "<5.0 || >=7.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.4",
-                "infection/infection": "^0.27",
+                "friendsofphp/php-cs-fixer": "^3.91",
+                "infection/infection": "^0.32",
                 "marcocesarato/php-conventional-changelog": "^1.12",
                 "mikey179/vfsstream": "^1.6.10",
-                "phpstan/phpstan": "^1.3",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1.0",
-                "phpunit/phpunit": "^10.5",
-                "rector/rector": "^1.0",
-                "vimeo/psalm": "^5.0"
+                "phpbench/phpbench": "^1.3",
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "phpstan/phpstan-strict-rules": "^2.0",
+                "phpunit/phpunit": "^11.5",
+                "psr/http-message": "^2.0",
+                "rector/rector": "^2.0",
+                "vimeo/psalm": "^6.0"
             },
             "type": "library",
             "autoload": {
@@ -135,7 +139,7 @@
                     "homepage": "https://github.com/romm"
                 }
             ],
-            "description": "Library that helps to map any input into a strongly-typed value object structure.",
+            "description": "Dependency free PHP library that helps to map any input into a strongly-typed structure.",
             "homepage": "https://github.com/CuyZ/Valinor",
             "keywords": [
                 "array",
@@ -150,7 +154,7 @@
             ],
             "support": {
                 "issues": "https://github.com/CuyZ/Valinor/issues",
-                "source": "https://github.com/CuyZ/Valinor/tree/1.14.1"
+                "source": "https://github.com/CuyZ/Valinor/tree/2.4.0"
             },
             "funding": [
                 {
@@ -158,44 +162,53 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-06T07:46:46+00:00"
+            "time": "2026-03-23T17:38:05+00:00"
         },
         {
             "name": "cuyz/valinor-bundle",
-            "version": "0.4.1",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CuyZ/Valinor-Bundle.git",
-                "reference": "9337dc0380ca17d2a427c103630cd3f2337029f4"
+                "reference": "7f5fee01e5983d59dbb6d8c20ebde36a14443d9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CuyZ/Valinor-Bundle/zipball/9337dc0380ca17d2a427c103630cd3f2337029f4",
-                "reference": "9337dc0380ca17d2a427c103630cd3f2337029f4",
+                "url": "https://api.github.com/repos/CuyZ/Valinor-Bundle/zipball/7f5fee01e5983d59dbb6d8c20ebde36a14443d9a",
+                "reference": "7f5fee01e5983d59dbb6d8c20ebde36a14443d9a",
                 "shasum": ""
             },
             "require": {
-                "cuyz/valinor": "^1.0",
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
-                "symfony/config": "^5.4 || ^6.4 || ^7.0",
-                "symfony/dependency-injection": "^5.4 || ^6.4 || ^7.0",
-                "symfony/http-kernel": "^5.4 || ^6.4 || ^7.0"
+                "cuyz/valinor": "^2.0",
+                "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
+                "symfony/config": "^6.4 || ^7.0 || ^8.0",
+                "symfony/dependency-injection": "^6.4 || ^7.0 || ^8.0",
+                "symfony/http-kernel": "^6.4 || ^7.0 || ^8.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.21",
-                "infection/infection": "^0.27.0",
+                "infection/infection": "^0.31.0",
                 "marcocesarato/php-conventional-changelog": "^1.17",
-                "phpstan/phpstan": "^1.10",
-                "phpstan/phpstan-phpunit": "^1.3",
-                "phpstan/phpstan-strict-rules": "^1.5",
-                "phpstan/phpstan-symfony": "^1.3",
-                "phpunit/phpunit": "^10.2",
-                "symfony/console": "^5.4 || ^6.4 || ^7.0",
-                "symfony/framework-bundle": "^5.4 || ^6.4 || ^7.0",
-                "symfony/runtime": "^5.4 || ^6.4 || ^7.0"
+                "nyholm/psr7": "^1.8",
+                "php-http/discovery": "^1.20",
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "phpstan/phpstan-strict-rules": "^2.0",
+                "phpstan/phpstan-symfony": "^2.0",
+                "phpunit/phpunit": "^11.0",
+                "psr/http-factory": "^1.1",
+                "psr/http-message": "^2.0",
+                "symfony/browser-kit": "^5.4 || ^6.4 || ^7.0",
+                "symfony/console": "^6.4 || ^7.0 || ^8.0",
+                "symfony/framework-bundle": "^6.4 || ^7.0 || ^8.0",
+                "symfony/psr-http-message-bridge": "^7.3",
+                "symfony/runtime": "^6.4 || ^7.0 || ^8.0"
             },
             "type": "symfony-bundle",
             "autoload": {
+                "files": [
+                    "src/Resources/register-missing-interfaces.php"
+                ],
                 "psr-4": {
                     "CuyZ\\ValinorBundle\\": "src"
                 }
@@ -215,7 +228,7 @@
             "homepage": "https://github.com/CuyZ/Valinor-Bundle",
             "support": {
                 "issues": "https://github.com/CuyZ/Valinor-Bundle/issues",
-                "source": "https://github.com/CuyZ/Valinor-Bundle/tree/0.4.1"
+                "source": "https://github.com/CuyZ/Valinor-Bundle/tree/2.3.0"
             },
             "funding": [
                 {
@@ -223,7 +236,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-24T18:52:28+00:00"
+            "time": "2026-03-23T18:02:35+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -694,57 +707,6 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.2"
             },
             "time": "2024-09-11T13:17:53+00:00"
-        },
-        {
-            "name": "psr/simple-cache",
-            "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/simple-cache.git",
-                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/764e0b3939f5ca87cb904f570ef9be2d78a07865",
-                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.0.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\SimpleCache\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interfaces for simple caching",
-            "keywords": [
-                "cache",
-                "caching",
-                "psr",
-                "psr-16",
-                "simple-cache"
-            ],
-            "support": {
-                "source": "https://github.com/php-fig/simple-cache/tree/3.0.0"
-            },
-            "time": "2021-10-29T13:26:27+00:00"
         },
         {
             "name": "runtime/frankenphp-symfony",
