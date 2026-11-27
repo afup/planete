@@ -1,7 +1,25 @@
 @import "tailwindcss";
 
+@import "./fonts.css";
+
+/* Palette reprise d'afup.org */
 @theme {
-    --color-primary-300: #5fb9e5;
-    --color-primary-500: #36a7df;
-    --color-primary-900: #1d2241;
+    --color-afup-100: #e6f3f9;
+    --color-afup-300: #36a7df;
+    --color-afup-500: #007bba;
+    --color-afup-700: #2b3e74;
+    --color-afup-800: #1d2241;
+    --color-afup-900: #181c33;
+
+    --color-neutre-200: #f4f5f8;
+    --color-neutre-300: #e5e7eb;
+    --color-neutre-400: #929292;
+    --color-neutre-700: #3e3d40;
+}
+
+@layer base {
+    body {
+        /* Désactive les effets (italic, gras, etc) automatiques des polices pour prioriser les version contenues dans les polices */
+        font-synthesis: none;
+    }
 }
