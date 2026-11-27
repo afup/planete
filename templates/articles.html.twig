@@ -36,7 +36,7 @@
     </div>
 
     <nav class="sm:my-12 flex justify-between dark:text-gray-300">
-        <div class="flex-grow">
+        <div class="grow">
             {% if page > 1 %}
                 <a href="{{ path('articles_list', {page: page - 1}) }}" class="block sm:inline p-6 sm:p-0 hover:underline" data-qa="page-prev">Page précédente</a>
             {% endif %}
