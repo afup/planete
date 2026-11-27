@@ -1,19 +1,15 @@
-<div class="px-4 sm:px-0 sm:pt-4 border-b border-gray-200 dark:border-gray-600" data-qa="article">
-    <div class="flex flex-row gap-5">
-        <div class="text-gray-500 dark:text-gray-300 pt-1 hidden sm:block" data-qa="article-{{ index }}-date">{{ date | date('d/m/Y') }}</div>
-        <article class="pb-4 sm:pb-8">
-            <span class="sm:hidden text-sm text-gray-500 dark:text-gray-300">
-                {{ date | date('d/m/Y') }}
-            </span>
-            <div class="flex flex-col sm:flex-row gap-2 sm:gap-10 justify-between items-baseline mb-4 sm:mb-0">
-                <h2 class="font-bold text-lg sm:text-xl text-primary-900 dark:text-gray-300" data-qa="article-{{ index }}-title">{{ title }}</h2>
-                <a href="{{ url }}" class="grow-0 shrink-0 basis-auto text-primary-500 hover:underline" data-qa="article-{{ index }}-feed">
-                    Lire l'article sur {{ feed }}
-                </a>
-            </div>
-            <p class="py-2 font-light dark:text-gray-300" data-qa="article-{{ index }}-content">
-                {{ content | striptags | u.truncate(200, '...', false) | raw }}
-            </p>
-        </article>
+<article class="py-7 border-b border-neutre-300 dark:border-afup-700 flex gap-6" data-qa="article">
+    <div class="hidden sm:block w-24 shrink-0 text-sm text-neutre-400 pt-1" data-qa="article-{{ index }}-date">{{ date | date('d/m/Y') }}</div>
+    <div class="flex flex-col gap-2">
+        <div class="sm:hidden text-sm text-neutre-400">{{ date | date('d/m/Y') }}</div>
+        <h2 class="font-titre font-bold text-lg sm:text-xl leading-snug text-afup-800 dark:text-neutre-200" data-qa="article-{{ index }}-title">
+            <a href="{{ url }}" class="hover:text-afup-500 dark:hover:text-afup-300">{{ title }}</a>
+        </h2>
+        <p class="text-neutre-700 dark:text-neutre-300 leading-relaxed" data-qa="article-{{ index }}-content">
+            {{ content | striptags | u.truncate(200, '...', false) | raw }}
+        </p>
+        <a href="{{ url }}" class="self-start text-afup-500 dark:text-afup-300 font-medium hover:underline" data-qa="article-{{ index }}-feed">
+            Lire l'article sur {{ feed }} →
+        </a>
     </div>
-</div>
+</article>

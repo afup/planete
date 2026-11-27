@@ -21,41 +21,43 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body class="dark:bg-slate-800 flex flex-col h-screen justify-between">
+    <body class="font-sans dark:bg-afup-800 flex flex-col min-h-screen justify-between">
         <div>
-            <div class="hidden sm:block bg-primary-900">
-                <nav class="container mx-auto flex text-white justify-center">
-                    <a href="https://afup.org" class="px-5 py-1 text-sm hover:bg-primary-500">AFUP</a>
-                    <a href="https://event.afup.org" class="px-5 py-1 text-sm hover:bg-primary-500">{{ afup_global_menu_event_label ?? 'Event' }}</a>
-                    <a href="https://barometre.afup.org" class="px-5 py-1 text-sm hover:bg-primary-500">Baromètre</a>
-                    <a href="https://planete-php.fr" class="px-5 py-1 text-sm hover:bg-primary-500 bg-primary-500">Planète PHP</a>
-                    <a href="https://pufa.afup.org" class="px-5 py-1 text-sm hover:bg-primary-500">PUFA</a>
+            <div class="hidden sm:block bg-afup-800 dark:bg-afup-900">
+                <nav class="container mx-auto flex gap-1 py-1 text-white justify-center">
+                    <a href="https://afup.org" class="px-5 py-1 text-sm rounded hover:bg-afup-700">AFUP</a>
+                    <a href="https://event.afup.org" class="px-5 py-1 text-sm rounded hover:bg-afup-700">{{ afup_global_menu_event_label ?? 'Event' }}</a>
+                    <a href="https://barometre.afup.org" class="px-5 py-1 text-sm rounded hover:bg-afup-700">Baromètre</a>
+                    <a href="https://planete-php.fr" class="px-5 py-1 text-sm rounded hover:bg-afup-700 bg-afup-700">Planète PHP</a>
+                    <a href="https://pufa.afup.org" class="px-5 py-1 text-sm rounded hover:bg-afup-700">PUFA</a>
                 </nav>
             </div>
 
-            <div class="bg-primary-500">
-                <nav class="container mx-auto flex flex-col sm:flex-row text-white px-0 sm:px-64 justify-center">
-                    <div class="flex items-center grow gap-4 p-2 sm:p-0">
-                        <img src="{{ asset('images/afup-icon-inverted.png') }}" class="h-11 my-auto" alt=""/>
-                        <a href="{{ path('index') }}" class="text-2xl font-bold" data-qa="site-name">Planète PHP</a>
+            {% set route = app.request.attributes.get('_route') %}
+            <div class="bg-afup-300">
+                <nav class="max-w-4xl mx-auto flex flex-col sm:flex-row text-white sm:px-4">
+                    <div class="flex items-center grow gap-3 p-2 sm:px-0">
+                        <img src="{{ asset('images/afup-icon-inverted.png') }}" class="h-11" alt=""/>
+                        <a href="{{ path('index') }}" class="font-titre text-3xl" data-qa="site-name">Planète PHP</a>
                     </div>
-                    <div class="flex justify-between">
-                        <a href="{{ path('articles_list') }}" class="px-6 py-4 hover:bg-primary-300{% if app.request.attributes.get('_route') == 'articles_list' %} bg-primary-300 sm:bg-transparent sm:border-b-4 border-white{% endif %}">Articles</a>
-                        <a href="{{ path('feeds_list') }}" class="px-6 py-4 hover:bg-primary-300{% if app.request.attributes.get('_route') == 'feeds_list' %} bg-primary-300 sm:bg-transparent sm:border-b-4 border-white{% endif %}">Sources</a>
-                        <a href="{{ url('rss') }}" class="px-6 py-4 hover:bg-primary-300">Flux RSS</a>
+                    <div class="flex justify-between font-medium">
+                        <a href="{{ path('articles_list') }}" class="px-5 py-4 sm:py-5 border-b-4 {{ route == 'articles_list' ? 'border-white' : 'border-transparent hover:border-white/50' }}">Articles</a>
+                        <a href="{{ path('feeds_list') }}" class="px-5 py-4 sm:py-5 border-b-4 {{ route == 'feeds_list' ? 'border-white' : 'border-transparent hover:border-white/50' }}">Sources</a>
+                        <a href="{{ url('rss') }}" class="px-5 py-4 sm:py-5 border-b-4 border-transparent hover:border-white/50">Flux RSS</a>
                     </div>
                 </nav>
             </div>
 
-            <main class="container mx-auto px-0 sm:px-64 mt-0 sm:mt-4">
+            <main class="max-w-4xl mx-auto px-4 py-4">
                 {% block body %}{% endblock %}
             </main>
         </div>
 
-        <footer class="py-5 bg-slate-50 dark:bg-slate-700 dark:text-white text-center">
-            Un site <a href="https://afup.org" class="text-primary-500 hover:underline">AFUP</a><br />
-            Hébergé sur <a href="https://www.clever-cloud.com" class="text-primary-500 hover:underline">Clever Cloud</a><br/>
-            Code Source sur <a href="https://github.com/afup/planete" class="text-primary-500 hover:underline">GitHub</a>
+        <footer class="bg-afup-900 text-white/70 text-sm">
+            <div class="max-w-4xl mx-auto px-4 py-4 flex flex-col sm:flex-row gap-2 justify-between">
+                <span>Hébergé sur <a href="https://www.clever-cloud.com" class="text-afup-500 hover:underline">Clever Cloud</a>, code source sur <a href="https://github.com/afup/planete" class="text-afup-500 hover:underline">GitHub</a></span>
+                <span>© <a href="https://afup.org" class="hover:underline">AFUP</a> 2000-{{ 'now'|date('Y') }}</span>
+            </div>
         </footer>
     </body>
 </html>

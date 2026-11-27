@@ -23,7 +23,7 @@
 
 {% block body %}
 
-    <div class="flex flex-col gap-4 mt-4 sm:mt-0">
+    <div class="flex flex-col">
         {% for article in articles %}
             <twig:Article title="{{ article.title }}"
                           url="{{ article.url }}"
@@ -35,15 +35,15 @@
         {% endfor %}
     </div>
 
-    <nav class="sm:my-12 flex justify-between dark:text-gray-300">
-        <div class="grow">
+    <nav class="my-10 flex justify-between font-medium text-afup-500 dark:text-afup-300">
+        <div>
             {% if page > 1 %}
-                <a href="{{ path('articles_list', {page: page - 1}) }}" class="block sm:inline p-6 sm:p-0 hover:underline" data-qa="page-prev">Page précédente</a>
+                <a href="{{ path('articles_list', {page: page - 1}) }}" class="hover:underline" data-qa="page-prev">← Page précédente</a>
             {% endif %}
         </div>
 
         {% if hasNextPage %}
-            <a href="{{ path('articles_list', {page: page + 1}) }}" class="block p-6 sm:p-0 hover:underline" data-qa="page-next">Page suivante</a>
+            <a href="{{ path('articles_list', {page: page + 1}) }}" class="hover:underline" data-qa="page-next">Page suivante →</a>
         {% endif %}
     </nav>
 
